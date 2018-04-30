@@ -40,7 +40,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/bjorn/tiled	/archive/v1.1.5.tar.gz",
+          "url": "https://github.com/bjorn/tiled/archive/v1.1.5.tar.gz",
           "sha256": "3e505a8426a9b225a11a7ef9b3038dad499a88dcc65237f8c7bc82b2a00d38ff"
         }
       ]

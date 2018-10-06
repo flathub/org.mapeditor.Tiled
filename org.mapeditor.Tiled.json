@@ -1,11 +1,9 @@
 {
   "app-id": "org.mapeditor.Tiled",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.9",
+  "runtime-version": "5.11",
   "sdk": "org.kde.Sdk",
   "command": "tiled",
-  "rename-appdata-file": "tiled.appdata.xml",
-  "rename-desktop-file": "tiled.desktop",
   "rename-icon": "tiled",
   "finish-args": [
     "--socket=x11",
@@ -26,8 +24,7 @@
         "CONFIG+=release"
       ],
       "post-install": [
-        "sed 's/application-x-tiled/org.mapeditor.Tiled-mimetype/g' /app/share/mime/packages/tiled.xml > /app/share/mime/packages/org.mapeditor.Tiled.xml",
-        "rm /app/share/mime/packages/tiled.xml",
+        "sed -i 's/application-x-tiled/org.mapeditor.Tiled-mimetype/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",
         "for size in 16x16 32x32; do
           mv /app/share/icons/hicolor/$size/mimetypes/{application-x-tiled,org.mapeditor.Tiled-mimetype}.png
         done",
@@ -40,8 +37,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/bjorn/tiled/archive/v1.1.5.tar.gz",
-          "sha256": "3e505a8426a9b225a11a7ef9b3038dad499a88dcc65237f8c7bc82b2a00d38ff"
+          "url": "https://github.com/bjorn/tiled/archive/v1.2.0.tar.gz",
+          "sha256": "979ab56337ba365455d3b9cf54c957b94e15dbe82884143c9c12c2fd6771b48d"
         }
       ]
     }

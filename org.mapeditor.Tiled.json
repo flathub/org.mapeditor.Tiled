@@ -1,16 +1,16 @@
 {
   "app-id": "org.mapeditor.Tiled",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.11",
+  "runtime-version": "5.12",
   "sdk": "org.kde.Sdk",
   "command": "tiled",
-  "rename-icon": "tiled",
   "finish-args": [
     "--socket=x11",
     "--socket=wayland",
     "--share=ipc",
+    "--share=network",
     "--device=dri",
-    "--filesystem=home"
+    "--filesystem=host"
   ],
   "cleanup": [
     "/share/man",
@@ -37,8 +37,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/bjorn/tiled/archive/v1.2.0.tar.gz",
-          "sha256": "979ab56337ba365455d3b9cf54c957b94e15dbe82884143c9c12c2fd6771b48d"
+          "url": "https://github.com/bjorn/tiled/archive/v1.2.1.tar.gz",
+          "sha256": "3292c11c2dbdade2bf4d54723441882a77e123b75e7a5f8adc3f41508f9f26e8"
         }
       ]
     }

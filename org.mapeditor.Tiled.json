@@ -37,8 +37,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/bjorn/tiled/archive/v1.2.1.tar.gz",
-          "sha256": "3292c11c2dbdade2bf4d54723441882a77e123b75e7a5f8adc3f41508f9f26e8"
+          "url": "https://github.com/bjorn/tiled/archive/v1.2.4.tar.gz",
+          "sha256": "591d9aef53a3d618fca8f8f61101f618915584c3b188595c8632d38d97352ad8"
         }
       ]
     }

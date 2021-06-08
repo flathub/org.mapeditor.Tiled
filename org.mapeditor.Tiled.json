@@ -25,6 +25,7 @@
       ],
       "post-install": [
         "sed -i 's/application-x-tiled/org.mapeditor.Tiled-mimetype/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",
+        "sed -i 's/Icon=tiled/Icon=org.mapeditor.Tiled/g' /app/share/applications/org.mapeditor.Tiled.desktop",
         "for size in 16x16 32x32; do
           mv /app/share/icons/hicolor/$size/mimetypes/{application-x-tiled,org.mapeditor.Tiled-mimetype}.png
         done",
@@ -32,13 +33,17 @@
         "for size in 64 128; do
           rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/tiled.svg
           install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/tiled.png
-        done"
+        done",
+        "for size in 16x16 32x32 64x64 128x128; do
+          mv /app/share/icons/hicolor/$size/apps/tiled.png /app/share/icons/hicolor/$size/apps/org.mapeditor.Tiled.png
+        done",
+        "mv /app/share/icons/hicolor/scalable/apps/tiled.svg /app/share/icons/hicolor/scalable/apps/org.mapeditor.Tiled.svg"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/bjorn/tiled/archive/v1.4.3.tar.gz",
-          "sha256": "b45bb3c1aa08ce155c570092a6b7a8b5ac4bb320a0615e3257552f440f8db4dd"
+          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.7.0.tar.gz",
+          "sha256": "836492b127cc3cda62d4ac0cdc3b6ade8dd814d4a4d8b44871ab07acef87a260"
         }
       ]
     }

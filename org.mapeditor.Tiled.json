@@ -38,8 +38,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.7.0.tar.gz",
-          "sha256": "836492b127cc3cda62d4ac0cdc3b6ade8dd814d4a4d8b44871ab07acef87a260"
+          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.7.1.tar.gz",
+          "sha256": "86d45fdf5f12c66ba384aa0034cee87b3c73e845ed8918739a641f801813a4a7"
         }
       ]
     }

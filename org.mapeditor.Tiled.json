@@ -40,11 +40,8 @@
       "buildsystem": "simple",
       "build-commands": [
         "qbs setup-toolchains --detect",
-        "qbs --no-install qbs.installPrefix:/app",
-        "qbs install --no-build --install-root /"
-      ],
-      "config-opts": [
-        "CONFIG+=release"
+        "qbs --no-install config:release qbs.installPrefix:/app ",
+        "qbs install --no-build --install-root / config:release"
       ],
       "post-install": [
         "sed -i 's/application-x-tiled/org.mapeditor.Tiled-mimetype/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",

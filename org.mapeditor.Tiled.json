@@ -6,7 +6,7 @@
   "command": "tiled",
   "rename-icon": "tiled",
   "finish-args": [
-    "--socket=x11",
+    "--socket=fallback-x11",
     "--socket=wayland",
     "--share=ipc",
     "--share=network",
@@ -45,11 +45,11 @@
         "qbs install --no-build --install-root / config:release"
       ],
       "post-install": [
-        "sed -i 's/application-x-tiled/org.mapeditor.Tiled-mimetype/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",
+        "sed -i 's/application-x-tiled/org.mapeditor.Tiled.application-x-tiled/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",
         "for size in 16x16 32x32; do
-          mv /app/share/icons/hicolor/$size/mimetypes/{application-x-tiled,org.mapeditor.Tiled-mimetype}.png
+          mv /app/share/icons/hicolor/$size/mimetypes/{application-x-tiled,org.mapeditor.Tiled.application-x-tiled}.png
         done",
-        "mv /app/share/icons/hicolor/scalable/mimetypes/{application-x-tiled,org.mapeditor.Tiled-mimetype}.svg",
+        "mv /app/share/icons/hicolor/scalable/mimetypes/{application-x-tiled,org.mapeditor.Tiled.application-x-tiled}.svg",
         "for size in 64 128; do
           rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/tiled.svg
           install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/tiled.png
@@ -58,8 +58,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.8.6.tar.gz",
-          "sha256": "4af8359bd6803a8e14540bcef7acd9b74afd76a3f5c91f9c958705d7fc5fd885"
+          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.9.0.tar.gz",
+          "sha256": "57036ab2dabf3333cb28b9eb01fa07635f8e52d6950983fb76ab2cd30f7b4726"
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
   "app-id": "org.mapeditor.Tiled",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-21.08",
+  "runtime-version": "6.4",
   "sdk": "org.kde.Sdk",
   "command": "tiled",
   "rename-icon": "tiled",
@@ -21,18 +21,12 @@
   "modules": [
     {
       "name": "qbs",
+      "buildsystem": "cmake",
       "sources": [
         {
-          "type": "archive",
-          "url": "https://download.qt.io/official_releases/qbs/1.20.0/qbs-src-1.20.0.tar.gz",
-          "sha256": "44961a4bb61580ae821aaf25ebb5a5737bd8fb79ec0474aa2592cdd45cc5171f"
-        },
-        {
-          "type": "script",
-          "dest-filename": "configure",
-          "commands": [
-            "qmake QBS_INSTALL_PREFIX=/app CONFIG+=qbs_enable_project_file_updates qbs.pro"
-          ]
+          "type": "git",
+          "url": "https://github.com/qbs/qbs",
+          "tag": "v1.21.0"
         }
       ]
     },

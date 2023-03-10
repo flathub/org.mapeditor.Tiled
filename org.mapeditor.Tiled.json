@@ -1,7 +1,7 @@
 {
   "app-id": "org.mapeditor.Tiled",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-21.08",
+  "runtime-version": "6.4",
   "sdk": "org.kde.Sdk",
   "command": "tiled",
   "rename-icon": "tiled",
@@ -24,8 +24,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.qt.io/official_releases/qbs/1.20.0/qbs-src-1.20.0.tar.gz",
-          "sha256": "44961a4bb61580ae821aaf25ebb5a5737bd8fb79ec0474aa2592cdd45cc5171f"
+          "url": "https://download.qt.io/official_releases/qbs/1.24.1/qbs-src-1.24.1.tar.gz",
+          "sha256": "1f1a92c840e708bbbc30705e3b0bb1d0cd47ffcf679d566dd071a1768ee65992"
         },
         {
           "type": "script",
@@ -58,8 +58,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.9.2.tar.gz",
-          "sha256": "6332db65acc867a53be3c2e700c7934cdb96bc1436f465212f55594af9b3d2aa"
+          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.10.0.tar.gz",
+          "sha256": "60436003575b475adfd490832385306740bc6e1c51ceec023986cb251b0417ff"
         }
       ]
     }

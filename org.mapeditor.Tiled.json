@@ -22,6 +22,7 @@
     {
       "name": "qbs",
       "buildsystem": "cmake",
+      "config-opts": ["-DWITH_TESTS=OFF"],
       "sources": [
         {
           "type": "git",

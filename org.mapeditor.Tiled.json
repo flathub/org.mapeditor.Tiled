@@ -28,7 +28,8 @@
           "url": "https://github.com/qbs/qbs",
           "tag": "v1.21.0"
         }
-      ]
+      ],
+      "cleanup": ["*"]
     },
     {
       "name": "tiled",

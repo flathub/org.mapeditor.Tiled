@@ -1,7 +1,7 @@
 {
   "app-id": "org.mapeditor.Tiled",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.4",
+  "runtime-version": "6.5",
   "sdk": "org.kde.Sdk",
   "command": "tiled",
   "rename-icon": "tiled",

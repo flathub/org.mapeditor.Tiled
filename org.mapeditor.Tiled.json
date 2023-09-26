@@ -27,7 +27,7 @@
         {
           "type": "git",
           "url": "https://github.com/qbs/qbs",
-          "tag": "v2.1.2"
+          "commit": "cab4bc1b30a10eeda0b73da7fbe47e666aa3edac"
         }
       ],
       "cleanup": ["*"]

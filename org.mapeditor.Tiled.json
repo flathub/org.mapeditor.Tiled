@@ -1,7 +1,7 @@
 {
   "app-id": "org.mapeditor.Tiled",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.4",
+  "runtime-version": "6.5",
   "sdk": "org.kde.Sdk",
   "command": "tiled",
   "rename-icon": "tiled",
@@ -27,7 +27,7 @@
         {
           "type": "git",
           "url": "https://github.com/qbs/qbs",
-          "tag": "v1.21.0"
+          "commit": "cab4bc1b30a10eeda0b73da7fbe47e666aa3edac"
         }
       ],
       "cleanup": ["*"]

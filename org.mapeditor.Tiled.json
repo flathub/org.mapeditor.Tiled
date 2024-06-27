@@ -53,9 +53,9 @@
       ],
       "sources": [
         {
-          "type": "git",
-          "url": "https://github.com/mapeditor/tiled.git",
-          "commit": "19c2b8d153e3dfc409b631260237b69dfccf5a2e"
+          "type": "archive",
+          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.0.tar.gz",
+          "sha256": "8ca549341fe1d13f633494fcde5880205301e6bb26ee66f307d76a2efb7e21da"
         }
       ]
     }

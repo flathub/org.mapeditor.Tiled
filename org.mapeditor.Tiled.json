@@ -55,7 +55,12 @@
         {
           "type": "archive",
           "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.0.tar.gz",
-          "sha256": "8ca549341fe1d13f633494fcde5880205301e6bb26ee66f307d76a2efb7e21da"
+          "sha256": "8ca549341fe1d13f633494fcde5880205301e6bb26ee66f307d76a2efb7e21da",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 7298,
+            "url-template": "https://github.com/mapeditor/tiled/archive/refs/tags/v$version.tar.gz"
+          }
         }
       ]
     }

@@ -1,68 +1,87 @@
 {
-  "app-id": "org.mapeditor.Tiled",
-  "runtime": "org.kde.Platform",
-  "runtime-version": "6.7",
-  "sdk": "org.kde.Sdk",
-  "command": "tiled",
-  "rename-icon": "tiled",
-  "finish-args": [
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--share=ipc",
-    "--share=network",
-    "--device=dri",
-    "--talk-name=org.freedesktop.FileManager1",
-    "--filesystem=host"
-  ],
-  "cleanup": [
-    "/share/man",
-    "/share/thumbnailers"
-  ],
-  "modules": [
-    {
-      "name": "qbs",
-      "buildsystem": "cmake",
-      "config-opts": ["-DWITH_TESTS=OFF"],
-      "sources": [
+    "app-id": "org.mapeditor.Tiled",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.8",
+    "sdk": "org.kde.Sdk",
+    "command": "tiled",
+    "rename-icon": "tiled",
+    "finish-args": [
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--share=ipc",
+        "--share=network",
+        "--device=dri",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--filesystem=host"
+    ],
+    "cleanup": [
+        "/share/man",
+        "/share/thumbnailers"
+    ],
+    "modules": [
         {
-          "type": "git",
-          "url": "https://github.com/qbs/qbs",
-          "commit": "cab4bc1b30a10eeda0b73da7fbe47e666aa3edac"
-        }
-      ],
-      "cleanup": ["*"]
-    },
-    {
-      "name": "tiled",
-      "buildsystem": "simple",
-      "build-commands": [
-        "qbs setup-toolchains --detect",
-        "qbs --no-install config:release qbs.installPrefix:/app ",
-        "qbs install --no-build --install-root / config:release"
-      ],
-      "post-install": [
-        "sed -i 's/application-x-tiled/org.mapeditor.Tiled.application-x-tiled/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",
-        "for size in 16x16 32x32; do
-          mv /app/share/icons/hicolor/$size/mimetypes/{application-x-tiled,org.mapeditor.Tiled.application-x-tiled}.png
-        done",
-        "mv /app/share/icons/hicolor/scalable/mimetypes/{application-x-tiled,org.mapeditor.Tiled.application-x-tiled}.svg",
-        "for size in 64 128; do
-          rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/tiled.svg
-          install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/tiled.png
-        done"
-      ],
-      "sources": [
+            "name": "qbs",
+            "buildsystem": "cmake",
+            "config-opts": [
+                "-DWITH_TESTS=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/qbs/qbs/archive/refs/tags/v2.4.2.tar.gz",
+                    "sha256": "9f8005b34fa046c3b98206741c70a7859079cd76a762403da19b6b4e49da30b5"
+                }
+            ],
+            "cleanup": [
+                "*"
+            ]
+        },
         {
-          "type": "archive",
-          "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.0.tar.gz",
-          "sha256": "8ca549341fe1d13f633494fcde5880205301e6bb26ee66f307d76a2efb7e21da",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 7298,
-            "url-template": "https://github.com/mapeditor/tiled/archive/refs/tags/v$version.tar.gz"
-          }
+            "name": "qaseprite",
+            "buildsystem": "cmake",
+            "builddir": true,
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DUSE_SHARED_ZLIB=on",
+                "-DUSE_SHARED_PIXMAN=on",
+                "-DUSE_SHARED_FREETYPE=on",
+                "-DUSE_SHARED_HARFBUZZ=on",
+                "-DQT_PLUGIN_PATH=/app/lib/plugins"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mapeditor/qaseprite",
+                    "commit": "a138f25967013b49c57720449f3cbe18f3651958"
+                }
+            ]
+        },
+        {
+            "name": "tiled",
+            "buildsystem": "simple",
+            "build-commands": [
+                "qbs setup-toolchains --detect",
+                "qbs --no-install config:release qbs.installPrefix:/app",
+                "qbs install --no-build --install-root / config:release"
+            ],
+            "post-install": [
+                "sed -i 's/application-x-tiled/org.mapeditor.Tiled.application-x-tiled/g' /app/share/mime/packages/org.mapeditor.Tiled.xml",
+                "for size in 16x16 32x32; do\n mv /app/share/icons/hicolor/$size/mimetypes/{application-x-tiled,org.mapeditor.Tiled.application-x-tiled}.png\n done",
+                "mv /app/share/icons/hicolor/scalable/mimetypes/{application-x-tiled,org.mapeditor.Tiled.application-x-tiled}.svg",
+                "for size in 64 128; do\n rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/tiled.svg\n install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/tiled.png\n done"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.1.tar.gz",
+                    "sha256": "2e5e4f040eb1804f79aa9487f7a83d1103edffd52f9da6293b2cd4f166f60f5f",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 7298,
+                        "url-template": "https://github.com/mapeditor/tiled/archive/refs/tags/v$version.tar.gz"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

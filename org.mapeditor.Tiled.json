@@ -73,8 +73,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.1.tar.gz",
-                    "sha256": "2e5e4f040eb1804f79aa9487f7a83d1103edffd52f9da6293b2cd4f166f60f5f",
+                    "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.90.tar.gz",
+                    "sha256": "873d517db850f5f59e97d55ead85d82d5137700559a66de50d749bdc7a1e418a",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 7298,

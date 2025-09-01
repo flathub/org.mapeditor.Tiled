@@ -28,8 +28,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/qbs/qbs/archive/refs/tags/v2.4.2.tar.gz",
-                    "sha256": "9f8005b34fa046c3b98206741c70a7859079cd76a762403da19b6b4e49da30b5"
+                    "url": "https://github.com/qbs/qbs/archive/refs/tags/v2.6.1.tar.gz",
+                    "sha256": "bca391dd01168e075305baddcef7d4cf0a00b8543ee70b43942817db72d64904"
                 }
             ],
             "cleanup": [
@@ -52,7 +52,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/mapeditor/qaseprite",
-                    "commit": "a138f25967013b49c57720449f3cbe18f3651958"
+                    "tag": "1.0.1",
+                    "commit": "d2ba81f7d0c3329bfba015f9cb07527a9c9d743a"
                 }
             ]
         },
@@ -72,9 +73,9 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/mapeditor/tiled/archive/refs/tags/v1.11.1.tar.gz",
-                    "sha256": "2e5e4f040eb1804f79aa9487f7a83d1103edffd52f9da6293b2cd4f166f60f5f",
+                    "type": "git",
+                    "url": "https://github.com/mapeditor/tiled.git",
+                    "commit": "93fb1e926556794ef3298f8c2b0916105dec47c2",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 7298,

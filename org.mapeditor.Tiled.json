@@ -79,6 +79,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 7298,
+                        "tag-template": "v$version",
                         "url-template": "https://github.com/mapeditor/tiled/archive/refs/tags/v$version.tar.gz"
                     }
                 }

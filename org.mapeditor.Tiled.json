@@ -28,8 +28,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/qbs/qbs/archive/refs/tags/v2.6.1.tar.gz",
-                    "sha256": "bca391dd01168e075305baddcef7d4cf0a00b8543ee70b43942817db72d64904"
+                    "url": "https://github.com/qbs/qbs/archive/refs/tags/v3.1.2.tar.gz",
+                    "sha256": "33a981d51615a0115ecf8ec17b237c821cc403c613f4bc8623207d63a9183dc0"
                 }
             ],
             "cleanup": [

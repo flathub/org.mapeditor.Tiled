@@ -75,7 +75,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/mapeditor/tiled.git",
-                    "commit": "93fb1e926556794ef3298f8c2b0916105dec47c2",
+                    "branch": "1.11",
+                    "commit": "b88da92804132eefb2e1dbb595a45bedc2f842e8",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 7298,

@@ -75,14 +75,14 @@
                 {
                     "type": "git",
                     "url": "https://github.com/mapeditor/tiled.git",
-                    "commit": "eb20ac50b8b3d68f09bdbd4afea99d1d1150cf87",
+                    "commit": "2d2feea40aecf22545b960789c70d41b372df5eb",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 7298,
                         "tag-template": "v$version",
                         "url-template": "https://github.com/mapeditor/tiled/archive/refs/tags/v$version.tar.gz"
                     },
-                    "tag": "v1.12.0"
+                    "tag": "v1.12.1"
                 }
             ]
         }
